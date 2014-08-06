@@ -121,7 +121,6 @@
                             [fileManager createDirectoryAtPath:parsedBookDic withIntermediateDirectories:YES attributes:nil error:nil];
                         }
                         NSString *path = [parsedBookDic stringByAppendingPathComponent:[NSString stringWithFormat:@"%lld#%@.txt",chapterFileIndex,chapterName]];
-                        chapterName = lineData;
                         [fileManager createFileAtPath:path contents:chapterData attributes:nil];
                         chapterFileIndex++;
                         NSString *tmpContent = [[NSString alloc] initWithData:chapterData encoding:reader.stringEncoding];
@@ -135,6 +134,7 @@
                     
                     [reader.fileHandle seekToFileOffset:lineEndIndex];//恢复之前的位置
                     chapterStartIndex = lineEndIndex;
+                    chapterName = lineData;
                 }
             }
             if (!lineData) {
