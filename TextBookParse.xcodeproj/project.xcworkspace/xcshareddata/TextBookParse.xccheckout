@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C7D61D20-B05E-4BC6-B0C5-9498F83113E9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TextBookParse</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C046AB16-1DBE-4089-80D9-6AD53DA62A43</key>
+		<string>ssh://github.com/david122886/TextBookParse.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TextBookParse.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C046AB16-1DBE-4089-80D9-6AD53DA62A43</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/david122886/TextBookParse.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C046AB16-1DBE-4089-80D9-6AD53DA62A43</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C046AB16-1DBE-4089-80D9-6AD53DA62A43</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TextBookParse</string>
+		</dict>
+	</array>
+</dict>
+</plist>

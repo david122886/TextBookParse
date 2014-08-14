@@ -116,12 +116,13 @@
                     
                     [reader.fileHandle seekToFileOffset:chapterStartIndex];//定位开始截取地方
                     NSData *chapterData = [reader.fileHandle readDataOfLength:chapterEndIndex - chapterStartIndex];
-                    if (chapterData.length > 0) {
+                    NSString *stringData = [[NSString alloc] initWithData:chapterData encoding:reader.stringEncoding];
+                    if (stringData.length > 0) {
                         if (![fileManager fileExistsAtPath:parsedBookDic]) {
                             [fileManager createDirectoryAtPath:parsedBookDic withIntermediateDirectories:YES attributes:nil error:nil];
                         }
                         NSString *path = [parsedBookDic stringByAppendingPathComponent:[NSString stringWithFormat:@"%lld#%@.txt",chapterFileIndex,chapterName]];
-                        [fileManager createFileAtPath:path contents:chapterData attributes:nil];
+                        [stringData writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
                         chapterFileIndex++;
                         NSString *tmpContent = [[NSString alloc] initWithData:chapterData encoding:reader.stringEncoding];
                         NSLog(@"%@",tmpContent);
@@ -149,13 +150,14 @@
                 }
                 [reader.fileHandle seekToFileOffset:chapterStartIndex];//定位开始截取地方
                 NSData *chapterData = [reader.fileHandle availableData];
-                if (chapterData.length > 0) {
+                NSString *stringData = [[NSString alloc] initWithData:chapterData encoding:reader.stringEncoding];
+                if (stringData.length > 0) {
                     if (![fileManager fileExistsAtPath:parsedBookDic]) {
                         [fileManager createDirectoryAtPath:parsedBookDic withIntermediateDirectories:YES attributes:nil error:nil];
                     }
                     NSString *path = [parsedBookDic stringByAppendingPathComponent:[NSString stringWithFormat:@"%lld#%@.txt",chapterFileIndex,chapterName]];
                     chapterName = nil;
-                    [fileManager createFileAtPath:path contents:chapterData attributes:nil];
+                    [stringData writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
                     chapterFileIndex++;
                     NSString *tmpContent = [[NSString alloc] initWithData:chapterData encoding:reader.stringEncoding];
                     NSLog(@"%@",tmpContent);
