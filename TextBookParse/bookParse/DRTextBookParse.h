@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DRParseChapter.h"
+#import "DRParseChapter+LocalFile.h"
 ///解析txt格式小说，分离出章节单独保存在Document对应小说名目录下，
 @interface DRTextBookParse : NSObject
 ///判断这本书是否解析过
@@ -14,4 +16,11 @@
 
 ///遍历整本书所有章节信息
 +(void)parseBookWithBookFilePath:(NSString*)filePath findTheChapterBlock:(void(^)(NSString *chapterFilePath))findTheChapter withComplete:(void (^)(BOOL success))success withFailure:(void (^)(NSError *error))failure;
+
+///chaptersArray 存放是DRParseChapter 对象
++(void)parseBookWithBookFilePath:(NSString *)filePath
+                   progressBlock:(void (^)(unsigned long long
+                                           readLength,unsigned long long totalLength,DRParseChapter *findChapter))findChapterBlock
+                    withComplete:(void (^)(NSArray *chaptersArray))success
+                     withFailure:(void (^)(NSError *))failure;
 @end

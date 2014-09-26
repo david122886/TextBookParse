@@ -11,6 +11,7 @@
 @implementation NSData (encoding)
 ///获取编码格式
 -(NSStringEncoding)getCharEncoding{
+    
     if ([[NSString alloc] initWithData:self encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)]) {
         return CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
     }

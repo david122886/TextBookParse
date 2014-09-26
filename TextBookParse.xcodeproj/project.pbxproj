@@ -24,6 +24,8 @@
 		664422D41990ACC000C26AAE /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 664422D31990ACC000C26AAE /* DDFileReader.m */; };
 		664422D61990B5A600C26AAE /* 天才相师.txt in Resources */ = {isa = PBXBuildFile; fileRef = 664422D51990B5A600C26AAE /* 天才相师.txt */; };
 		664422D91990BA9E00C26AAE /* DRTextBookParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 664422D81990BA9E00C26AAE /* DRTextBookParse.m */; };
+		6652780C19D161020090178D /* DRParseChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6652780B19D161020090178D /* DRParseChapter.m */; };
+		6652780F19D1613F0090178D /* DRParseChapter+LocalFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6652780E19D1613F0090178D /* DRParseChapter+LocalFile.m */; };
 		66BFAF321991D91100397573 /* NSData+encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BFAF311991D91100397573 /* NSData+encoding.m */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,10 @@
 		664422D51990B5A600C26AAE /* 天才相师.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "天才相师.txt"; sourceTree = "<group>"; };
 		664422D71990BA9E00C26AAE /* DRTextBookParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTextBookParse.h; sourceTree = "<group>"; };
 		664422D81990BA9E00C26AAE /* DRTextBookParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTextBookParse.m; sourceTree = "<group>"; };
+		6652780A19D161020090178D /* DRParseChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRParseChapter.h; sourceTree = "<group>"; };
+		6652780B19D161020090178D /* DRParseChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRParseChapter.m; sourceTree = "<group>"; };
+		6652780D19D1613F0090178D /* DRParseChapter+LocalFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DRParseChapter+LocalFile.h"; sourceTree = "<group>"; };
+		6652780E19D1613F0090178D /* DRParseChapter+LocalFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DRParseChapter+LocalFile.m"; sourceTree = "<group>"; };
 		66BFAF301991D91100397573 /* NSData+encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+encoding.h"; sourceTree = "<group>"; };
 		66BFAF311991D91100397573 /* NSData+encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+encoding.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +180,10 @@
 				664422D81990BA9E00C26AAE /* DRTextBookParse.m */,
 				66BFAF301991D91100397573 /* NSData+encoding.h */,
 				66BFAF311991D91100397573 /* NSData+encoding.m */,
+				6652780A19D161020090178D /* DRParseChapter.h */,
+				6652780B19D161020090178D /* DRParseChapter.m */,
+				6652780D19D1613F0090178D /* DRParseChapter+LocalFile.h */,
+				6652780E19D1613F0090178D /* DRParseChapter+LocalFile.m */,
 			);
 			path = bookParse;
 			sourceTree = "<group>";
@@ -279,9 +289,11 @@
 				664422D41990ACC000C26AAE /* DDFileReader.m in Sources */,
 				66BFAF321991D91100397573 /* NSData+encoding.m in Sources */,
 				664422B31990ABC900C26AAE /* ViewController.m in Sources */,
+				6652780F19D1613F0090178D /* DRParseChapter+LocalFile.m in Sources */,
 				664422D91990BA9E00C26AAE /* DRTextBookParse.m in Sources */,
 				664422AD1990ABC900C26AAE /* AppDelegate.m in Sources */,
 				664422A91990ABC900C26AAE /* main.m in Sources */,
+				6652780C19D161020090178D /* DRParseChapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
