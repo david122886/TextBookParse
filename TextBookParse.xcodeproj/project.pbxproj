@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6628B69E19D7DC980050DE12 /* NSString+replaceNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 6628B69D19D7DC980050DE12 /* NSString+replaceNumbers.m */; };
+		6628B6A019D7DD410050DE12 /* NSString+replaceNumbersTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6628B69F19D7DD410050DE12 /* NSString+replaceNumbersTest.m */; };
 		6644229D1990ABC900C26AAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6644229C1990ABC900C26AAE /* Foundation.framework */; };
 		6644229F1990ABC900C26AAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6644229E1990ABC900C26AAE /* CoreGraphics.framework */; };
 		664422A11990ABC900C26AAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664422A01990ABC900C26AAE /* UIKit.framework */; };
@@ -40,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6628B69C19D7DC980050DE12 /* NSString+replaceNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+replaceNumbers.h"; sourceTree = "<group>"; };
+		6628B69D19D7DC980050DE12 /* NSString+replaceNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+replaceNumbers.m"; sourceTree = "<group>"; };
+		6628B69F19D7DD410050DE12 /* NSString+replaceNumbersTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+replaceNumbersTest.m"; sourceTree = "<group>"; };
 		664422991990ABC900C26AAE /* TextBookParse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextBookParse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6644229C1990ABC900C26AAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6644229E1990ABC900C26AAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -184,6 +189,9 @@
 				6652780B19D161020090178D /* DRParseChapter.m */,
 				6652780D19D1613F0090178D /* DRParseChapter+LocalFile.h */,
 				6652780E19D1613F0090178D /* DRParseChapter+LocalFile.m */,
+				6628B69C19D7DC980050DE12 /* NSString+replaceNumbers.h */,
+				6628B69D19D7DC980050DE12 /* NSString+replaceNumbers.m */,
+				6628B69F19D7DD410050DE12 /* NSString+replaceNumbersTest.m */,
 			);
 			path = bookParse;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 			files = (
 				664422D41990ACC000C26AAE /* DDFileReader.m in Sources */,
 				66BFAF321991D91100397573 /* NSData+encoding.m in Sources */,
+				6628B69E19D7DC980050DE12 /* NSString+replaceNumbers.m in Sources */,
 				664422B31990ABC900C26AAE /* ViewController.m in Sources */,
 				6652780F19D1613F0090178D /* DRParseChapter+LocalFile.m in Sources */,
 				664422D91990BA9E00C26AAE /* DRTextBookParse.m in Sources */,
@@ -302,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				664422C81990ABC900C26AAE /* TextBookParseTests.m in Sources */,
+				6628B6A019D7DD410050DE12 /* NSString+replaceNumbersTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

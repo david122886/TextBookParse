@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "bookParse/DRTextBookParse.h"
 #import "NSData+encoding.h"
+#import "NSString+replaceNumbers.h"
 @interface ViewController ()
 
 @end
@@ -18,6 +19,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+////    NSString *test = @"第1964章 要战便战 ";
+//    NSString *test = @"这些强者放在一些中型城市里，那也都是最顶尖的存在，偏偏在这千城之战的战场中，他们却只能屈居于第二集团。";
+//    NSRange range = [test rangeOfString:@"^[\\S]{0,10}第\\s*[0-9零一二三四五六七八九十百千万]+\\s*[篇书首集卷回章部]{1}[\\S]{0,30}$" options:NSRegularExpressionSearch];
 //    return;
     // 创建文件管理器
     NSDate *beginDate = [NSDate date];
@@ -47,12 +51,14 @@
     
     NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:bookFile];
     
-    [DRTextBookParse parseBookWithBookFilePath:bookFile progressBlock:^(unsigned long long readLength, unsigned long long totalLength, DRParseChapter *findChapter) {
+    [DRTextBookParse parseBookWithBookFilePath:bookFile loadFirstChapter:^(DRParseChapter *findChapter) {
         NSLog(@"%@",findChapter);
-        [fileHandle seekToFileOffset:findChapter.chapterStartIndex];
-        NSData *content = [fileHandle readDataOfLength:findChapter.chapterEndIndex - findChapter.chapterStartIndex];
-        NSLog(@"%@",[[NSString alloc] initWithData:content encoding:[content getCharEncoding]]);
-        NSLog(@"---------------------------------------------------------");
+    } progressBlock:^(unsigned long long readLength, unsigned long long totalLength, DRParseChapter *findChapter) {
+        NSLog(@"%@",findChapter);
+//        [fileHandle seekToFileOffset:findChapter.chapterStartIndex];
+//        NSData *content = [fileHandle readDataOfLength:findChapter.chapterEndIndex - findChapter.chapterStartIndex];
+//        NSLog(@"%@",[[NSString alloc] initWithData:content encoding:[content getCharEncoding]]);
+//        NSLog(@"---------------------------------------------------------");
     } withComplete:^(NSArray *chaptersArray) {
 //        NSLog(@"%@",chaptersArray);
     } withFailure:^(NSError *error) {

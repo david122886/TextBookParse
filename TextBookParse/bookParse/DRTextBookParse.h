@@ -19,6 +19,7 @@
 
 ///chaptersArray 存放是DRParseChapter 对象
 +(void)parseBookWithBookFilePath:(NSString *)filePath
+                loadFirstChapter:(void (^)(DRParseChapter *findChapter))findFirstChapterBlock
                    progressBlock:(void (^)(unsigned long long
                                            readLength,unsigned long long totalLength,DRParseChapter *findChapter))findChapterBlock
                     withComplete:(void (^)(NSArray *chaptersArray))success

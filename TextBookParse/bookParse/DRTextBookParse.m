@@ -175,14 +175,11 @@
     });
 }
 
-///判断该行是否是章节标题
-+(BOOL)hasChapterTitleLineData:(NSString*)lineString{
-    NSRange range = [lineString rangeOfString:@"第\\s*[0-9零一二三四五六七八九十百千万]+\\s*[篇书首集卷回章节部]+" options:NSRegularExpressionSearch];
-    return range.length > 2;
-}
+
 
 ///chaptersArray 存放是DRParseChapter 对象
 +(void)parseBookWithBookFilePath:(NSString *)filePath
+                loadFirstChapter:(void (^)(DRParseChapter *findChapter))findFirstChapterBlock
                    progressBlock:(void (^)(unsigned long long
                                            readLength,unsigned long long totalLength,DRParseChapter *findChapter))findChapterBlock
                     withComplete:(void (^)(NSArray *chaptersArray))success
@@ -192,7 +189,7 @@
         return;
     }
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         NSFileManager *fileManager = [NSFileManager defaultManager];
         NSString *parsedBookDic = [self getBookParseDicPathWithBookFilePath:filePath];
         NSMutableArray *chapterArray = [NSMutableArray arrayWithContentsOfFile:[parsedBookDic stringByAppendingPathComponent:kBookChapterArrayFileName]];
@@ -220,86 +217,64 @@
         }
         chapterArray = [NSMutableArray array];
         
-        BOOL isMore = YES;
-        long long chapterStartIndex = 0ULL;
-        long long chapterEndIndex = 0ULL;
-        BOOL isHeader = YES;
-        NSString *chapterName = nil;
-        while (isMore) {
-            long long lineStartIndex = reader.currentOffset;
-            NSString *lineData =  [reader readLine];
-            if ([self hasChapterTitleLineData:lineData]) {
-                long long lineEndIndex = reader.currentOffset;
-                if (isHeader) {
-                    chapterStartIndex = lineEndIndex;
-                    isHeader = NO;
-                    chapterName = lineData;
-//                    NSLog(@"%@",chapterName);
-                }else{
-                    chapterEndIndex = lineStartIndex;
-                    if (chapterEndIndex - chapterStartIndex <=0) {
-                        continue;
+        DRParseChapter *tmpChapter = nil;
+        unsigned long long lastChapterStartIndex = 0;
+        NSMutableArray *waittingSetEndIndexChapterArray = [NSMutableArray array];
+        while (reader.currentOffset < reader.totalFileLength) {
+            unsigned long long lineStartIndex = reader.currentOffset;
+            NSString *lineString =  [reader readLine];
+            unsigned long long lineEndIndex = reader.currentOffset;
+            if ([reader hasChapterTitleLineData:lineString]) {
+                DRParseChapter *lastChapter = [chapterArray lastObject];
+                tmpChapter = [[DRParseChapter alloc] init];
+                tmpChapter.chapterStartIndex = lineEndIndex;
+                tmpChapter.chapterName = lineString;
+                tmpChapter.index = (int)[chapterArray count];
+                
+                
+                if (lastChapter) {
+                    if (![reader valuableDataFromIndex:lastChapterStartIndex toIndex:lineStartIndex]) {
+                        [waittingSetEndIndexChapterArray addObject:lastChapter];
+                    }else{
+                        for (DRParseChapter *chap in waittingSetEndIndexChapterArray) {
+                            chap.chapterEndIndex = lineStartIndex;
+                        }
+                        [waittingSetEndIndexChapterArray removeAllObjects];
+                        lastChapter.chapterEndIndex = lineStartIndex;
                     }
-                    [reader.fileHandle seekToFileOffset:chapterStartIndex];//定位开始截取地方
-                    NSData *chapterData = [reader.fileHandle readDataOfLength:chapterEndIndex - chapterStartIndex];
-                    NSString *stringData = [[NSString alloc] initWithData:chapterData encoding:reader.stringEncoding];
-                    if (!stringData || [[stringData stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]) {
-                        [reader.fileHandle seekToFileOffset:lineEndIndex];//回复原来的位置
-                        continue;
+                }
+                if (chapterArray.count <= 0 || ![reader hasTheSameChapterName:tmpChapter.chapterName withAnotherChapterName:lastChapter.chapterName]) {
+                    [chapterArray addObject:tmpChapter];
+                    if (findChapterBlock && chapterArray.count > 1) {
+                        findChapterBlock(lineEndIndex,reader.totalFileLength,[chapterArray objectAtIndex:chapterArray.count - 2]);
                     }
-                    DRParseChapter *chapter = [[DRParseChapter alloc] init];
-                    chapter.index = (int)chapterArray.count;
-                    chapter.chapterName = chapterName;
-                    chapter.chapterStartIndex = chapterStartIndex;
-                    chapter.chapterEndIndex = chapterEndIndex;
-                    chapter.isEndChapter = NO;
-                    [chapterArray addObject:chapter];
-                    
-                    chapterStartIndex = lineEndIndex;
-                    chapterName = lineData;
-                    
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        if (findChapterBlock) {
-                            findChapterBlock(lineStartIndex,reader.totalFileLength,chapter);
+                        if (findFirstChapterBlock && chapterArray.count == 2) {
+                            findFirstChapterBlock([chapterArray firstObject]);
                         }
                     });
                 }
-            }
-            if (!lineData) {
-                isMore = NO;
-                if (chapterStartIndex <= 0ULL) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        if (failure) {
-                            failure([NSError errorWithDomain:@"" code:0 userInfo:@{@"msg": @"书籍内容格式不正确或者编码格式不支持"}]);
-                        }
-                    });
-                    return;
-                }
-                [reader.fileHandle seekToFileOffset:chapterStartIndex];//定位开始截取地方
-                NSData *chapterData = [reader.fileHandle availableData];
-                if (!chapterData) {
-                    continue;
-                }
-//                NSString *stringData = [[NSString alloc] initWithData:chapterData encoding:reader.stringEncoding];
-                DRParseChapter *chapter = [[DRParseChapter alloc] init];
-                chapter.index = (int)chapterArray.count;
-                chapter.chapterName = chapterName;
-                chapter.chapterStartIndex = chapterStartIndex;
-                chapter.chapterEndIndex = reader.totalFileLength;
-                chapter.isEndChapter = YES;
-                [chapterArray addObject:chapter];
                 
-                chapterName = nil;
-                chapterStartIndex = reader.totalFileLength;
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if (findChapterBlock) {
-                        findChapterBlock(reader.totalFileLength,reader.totalFileLength,chapter);
-                    }
-                });
+                lastChapterStartIndex = lineEndIndex;
             }
         }
+        
+        for (DRParseChapter *chap in waittingSetEndIndexChapterArray) {
+            chap.chapterEndIndex = reader.totalFileLength;
+        }
+        DRParseChapter *lastChapter = [chapterArray lastObject];
+        if (lastChapter) {
+            lastChapter.chapterEndIndex = reader.totalFileLength;
+            lastChapter.isEndChapter = YES;
+        }
+        
+        if (findChapterBlock) {
+            findChapterBlock(reader.totalFileLength,reader.totalFileLength,lastChapter);
+        }
         dispatch_async(dispatch_get_main_queue(), ^{
+            if (findFirstChapterBlock && chapterArray.count == 1) {
+                findFirstChapterBlock([chapterArray firstObject]);
+            }
             if (success) {
                 success(chapterArray);
             }

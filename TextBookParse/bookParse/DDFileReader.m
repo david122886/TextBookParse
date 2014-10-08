@@ -18,6 +18,9 @@
 
 #import "DDFileReader.h"
 #import "NSData+encoding.h"
+#import "NSString+replaceNumbers.h"
+////////////////////////////////////////
+
 @interface NSData (DDAdditions)
 
 - (NSRange) rangeOfData_dd:(NSData *)dataToFind;
@@ -123,6 +126,56 @@
 - (NSString *) readTrimmedLine {
     return [[self readLine] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
+
+-(BOOL)valuableDataFromIndex:(unsigned long long)fromIndex toIndex:(unsigned long long)toIndex{
+    if (toIndex <= fromIndex || fromIndex >= self.totalFileLength) {
+        return NO;
+    }
+    unsigned long long tmpIndex = self.currentOffset;
+    [self.fileHandle seekToFileOffset:fromIndex];
+    NSData *data = [self.fileHandle readDataOfLength:toIndex-fromIndex];
+    [self.fileHandle seekToFileOffset:tmpIndex];
+    if (!data || data.length <= 0) {
+        return NO;
+    }
+    NSString *tmpString = [[NSString alloc] initWithData:data encoding:self.stringEncoding];
+    if (!tmpString || [[tmpString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]) {
+        return NO;
+    }
+    if ([self hasChapterTitleLineData:tmpString]) {
+        return NO;
+    }
+    return YES;
+}
+
+///判断字符是否是相同章节名称
+-(BOOL)hasTheSameChapterName:(NSString*)oneChapterName withAnotherChapterName:(NSString*)anotherChapterName{
+    if (!oneChapterName || !oneChapterName) {
+        return NO;
+    }
+    NSString *tmpOne = [[oneChapterName replaceNumberStringWhenAllDiscoverToChineseChar] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *tmpTwo = [[anotherChapterName replaceNumberStringWhenAllDiscoverToChineseChar] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    if ([tmpOne isEqualToString:tmpTwo]) {
+        return YES;
+    }
+    NSRange oneRange = [tmpOne rangeOfString:kChapterNameIndexRegular options:NSRegularExpressionSearch];
+    NSRange anotherRange = [tmpTwo rangeOfString:kChapterNameIndexRegular options:NSRegularExpressionSearch];
+    if (oneRange.location != NSNotFound && anotherRange.location != NSNotFound) {
+        if ([[tmpOne substringWithRange:oneRange] isEqualToString:[tmpTwo substringWithRange:anotherRange]]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+
+///判断该行是否是章节标题
+-(BOOL)hasChapterTitleLineData:(NSString*)lineString{
+    NSRange range = [lineString rangeOfString:kChapterNameRegular options:NSRegularExpressionSearch];
+    return range.length > 2;
+}
+
 
 #if NS_BLOCKS_AVAILABLE
 - (void) enumerateLinesUsingBlock:(void(^)(NSString*, BOOL*))block {
