@@ -72,18 +72,18 @@
         chunkSize = 10;
         [self.fileHandle seekToEndOfFile];
         self.totalFileLength = [self.fileHandle offsetInFile];
-        self.stringEncoding = [self getcontentEncoding];
+        self.stringEncoding = [self getcontentEncodingWithFilePath:aPath];
         //we don't need to seek back, since readLine will do that.
     }
     return self;
 }
 
 
--(NSStringEncoding)getcontentEncoding{
+-(NSStringEncoding)getcontentEncodingWithFilePath:(NSString*)path{
     [self.fileHandle seekToFileOffset:0];
     NSData *data = [self.fileHandle readDataOfLength:(NSInteger)(10ULL < self.totalFileLength?10ULL:(self.totalFileLength -1ULL))];
     if (data) {
-        return [data getCharEncoding];
+        return [data getCharEncodingWithFilePath:path];
     }
     return NSUTF8StringEncoding;
 }
@@ -93,6 +93,7 @@
     self.currentOffset = 0ULL;
     
 }
+
 
 - (NSString *) readLine {
     if (self.currentOffset >= self.totalFileLength) { return nil; }

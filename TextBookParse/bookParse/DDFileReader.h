@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#define kChapterNameRegular @"^\\s*[\\S]{0,10}\\s*第\\s*[0-9零一二三四五六七八九十百千万]+\\s*[篇书首集卷回章部]{1}\\s*[\\S]{0,20}\\s*$"
+#define kChapterNameRegular @"^\\s*[\\S]{0,10}\\s*第\\s*[0-9零一二三四五六七八九十百千万]+\\s*[篇书首集卷回章节部]{1,2}\\s*[\\S]{0,20}\\s*$"
 //#define kChapterNameRegular @"[\\S]{0,10}第\\s*[0-9零一二三四五六七八九十百千万]+\\s*[篇书首集卷回章部]{1}[\\S]{0,30}"
 #define kChapterNameIndexRegular @"第\\s*[0-9零一二三四五六七八九十百千万]+\\s*[篇书首集卷回章部]{1}"
 @interface DDFileReader : NSObject {

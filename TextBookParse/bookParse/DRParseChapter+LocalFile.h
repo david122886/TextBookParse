@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "DRParseChapter.h"
 @interface DRParseChapter (LocalFile)
--(void)writeToPlistFileWithPlistFilePath:(NSString*)plistFilePath;
++(void)writeDRParseChaptersArray:(NSArray*)parseChapterArr ToPlistFileWithPlistFilePath:(NSString*)plistFilePath;
 
 +(NSArray*)parseChapterArrayFromPlistFilePath:(NSString*)plistFilePath;
 
--(BOOL)judgeIsLastChapterFromBookFilePath:(NSString*)bookFilePath;
 @end

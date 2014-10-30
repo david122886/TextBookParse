@@ -10,5 +10,5 @@
 
 @interface NSData (encoding)
 ///获取编码格式
--(NSStringEncoding)getCharEncoding;
+-(NSStringEncoding)getCharEncodingWithFilePath:(NSString*)filePath;
 @end

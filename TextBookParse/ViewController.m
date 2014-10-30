@@ -49,18 +49,13 @@
 //        NSLog(@"%@",error.userInfo[@"msg"]);
 //    }];
     
-    NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:bookFile];
     
-    [DRTextBookParse parseBookWithBookFilePath:bookFile loadFirstChapter:^(DRParseChapter *findChapter) {
-        NSLog(@"%@",findChapter);
+        [DRTextBookParse parseBookWithBookFilePath:bookFile withStartChapterIndex:0 loadFirstChapter:^(DRParseChapter *findChapter) {
+        
     } progressBlock:^(unsigned long long readLength, unsigned long long totalLength, DRParseChapter *findChapter) {
-        NSLog(@"%@",findChapter);
-//        [fileHandle seekToFileOffset:findChapter.chapterStartIndex];
-//        NSData *content = [fileHandle readDataOfLength:findChapter.chapterEndIndex - findChapter.chapterStartIndex];
-//        NSLog(@"%@",[[NSString alloc] initWithData:content encoding:[content getCharEncoding]]);
-//        NSLog(@"---------------------------------------------------------");
+        
     } withComplete:^(NSArray *chaptersArray) {
-//        NSLog(@"%@",chaptersArray);
+        
     } withFailure:^(NSError *error) {
         NSLog(@"%@",error.userInfo[@"msg"]);
     }];
