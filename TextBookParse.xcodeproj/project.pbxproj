@@ -29,6 +29,44 @@
 		664422C61990ABC900C26AAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 664422C41990ABC900C26AAE /* InfoPlist.strings */; };
 		664422C81990ABC900C26AAE /* TextBookParseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 664422C71990ABC900C26AAE /* TextBookParseTests.m */; };
 		664422D61990B5A600C26AAE /* 天才相师.txt in Resources */ = {isa = PBXBuildFile; fileRef = 664422D51990B5A600C26AAE /* 天才相师.txt */; };
+		6655149B1A0386A0009204CD /* DREpubBookParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6655149A1A0386A0009204CD /* DREpubBookParse.m */; };
+		6655149E1A0386D4009204CD /* DRBookParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6655149D1A0386D4009204CD /* DRBookParse.m */; };
+		666CA6C41A08653C0098688B /* KFEpubParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 666CA6C31A08653C0098688B /* KFEpubParser.m */; };
+		666CA6C71A0865610098688B /* KFEpubConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 666CA6C61A0865610098688B /* KFEpubConstants.m */; };
+		666CA6C91A086CAC0098688B /* DREpubBookParseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 666CA6C81A086CAC0098688B /* DREpubBookParseTest.m */; };
+		666CA6CD1A087ED20098688B /* 魔神紫星.epub in Resources */ = {isa = PBXBuildFile; fileRef = 666CA6CC1A087ED20098688B /* 魔神紫星.epub */; };
+		66A21E7C1A0773F00076B2CF /* HTMLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E3B1A0773EF0076B2CF /* HTMLComment.m */; };
+		66A21E7D1A0773F00076B2CF /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E3D1A0773EF0076B2CF /* HTMLDocument.m */; };
+		66A21E7E1A0773F00076B2CF /* HTMLDocumentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E3F1A0773EF0076B2CF /* HTMLDocumentType.m */; };
+		66A21E7F1A0773F00076B2CF /* HTMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E411A0773EF0076B2CF /* HTMLElement.m */; };
+		66A21E801A0773F00076B2CF /* HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E431A0773EF0076B2CF /* HTMLEntities.m */; };
+		66A21E811A0773F00076B2CF /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E461A0773EF0076B2CF /* HTMLNode.m */; };
+		66A21E821A0773F00076B2CF /* HTMLOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E481A0773EF0076B2CF /* HTMLOrderedDictionary.m */; };
+		66A21E831A0773F00076B2CF /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E4A1A0773EF0076B2CF /* HTMLParser.m */; };
+		66A21E841A0773F00076B2CF /* HTMLPreprocessedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E4C1A0773EF0076B2CF /* HTMLPreprocessedInputStream.m */; };
+		66A21E851A0773F00076B2CF /* HTMLSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E501A0773EF0076B2CF /* HTMLSelector.m */; };
+		66A21E861A0773F00076B2CF /* HTMLSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E521A0773EF0076B2CF /* HTMLSerialization.m */; };
+		66A21E871A0773F00076B2CF /* HTMLString.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E541A0773EF0076B2CF /* HTMLString.m */; };
+		66A21E881A0773F00076B2CF /* HTMLTextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E571A0773EF0076B2CF /* HTMLTextNode.m */; };
+		66A21E891A0773F00076B2CF /* HTMLTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E591A0773EF0076B2CF /* HTMLTokenizer.m */; };
+		66A21E8A1A0773F00076B2CF /* HTMLTreeEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E5C1A0773EF0076B2CF /* HTMLTreeEnumerator.m */; };
+		66A21E8B1A0773F00076B2CF /* NSString+HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E5E1A0773EF0076B2CF /* NSString+HTMLEntities.m */; };
+		66A21E8C1A0773F00076B2CF /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E621A0773EF0076B2CF /* DDXMLElementAdditions.m */; };
+		66A21E8D1A0773F00076B2CF /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E651A0773EF0076B2CF /* NSString+DDXML.m */; };
+		66A21E8E1A0773F00076B2CF /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E681A0773EF0076B2CF /* DDXMLDocument.m */; };
+		66A21E8F1A0773F00076B2CF /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E6A1A0773EF0076B2CF /* DDXMLElement.m */; };
+		66A21E901A0773F00076B2CF /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E6C1A0773EF0076B2CF /* DDXMLNode.m */; };
+		66A21E911A0773F00076B2CF /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E721A0773F00076B2CF /* ioapi.c */; };
+		66A21E921A0773F00076B2CF /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E741A0773F00076B2CF /* mztools.c */; };
+		66A21E931A0773F00076B2CF /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E761A0773F00076B2CF /* unzip.c */; };
+		66A21E941A0773F00076B2CF /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E781A0773F00076B2CF /* zip.c */; };
+		66A21E951A0773F00076B2CF /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E7B1A0773F00076B2CF /* SSZipArchive.m */; };
+		66A21E971A07742A0076B2CF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A21E961A07742A0076B2CF /* libxml2.dylib */; };
+		66A21E991A0774F50076B2CF /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A21E981A0774F50076B2CF /* libz.1.2.5.dylib */; };
+		66BAA4531A0A057B00CD8FD5 /* KFEpubParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BAA4521A0A057B00CD8FD5 /* KFEpubParserTest.m */; };
+		66BAA4541A0A073800CD8FD5 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A21E961A07742A0076B2CF /* libxml2.dylib */; };
+		66D0ED381A0B469A00586EBE /* DRParseChapterContent.h in Sources */ = {isa = PBXBuildFile; fileRef = 66D0ED371A0B467D00586EBE /* DRParseChapterContent.h */; };
+		66D0ED391A0B469F00586EBE /* DRParseChapterContent.h in Sources */ = {isa = PBXBuildFile; fileRef = 66D0ED371A0B467D00586EBE /* DRParseChapterContent.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,12 +87,12 @@
 		6642F78A1A0212B700B0DB3A /* DRTextBookParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTextBookParse.m; sourceTree = "<group>"; };
 		6642F78B1A0212B700B0DB3A /* NSData+encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+encoding.h"; sourceTree = "<group>"; };
 		6642F78C1A0212B700B0DB3A /* NSData+encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+encoding.m"; sourceTree = "<group>"; };
-		6642F78D1A0212B700B0DB3A /* DRParseChapter+LocalFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DRParseChapter+LocalFile.h"; sourceTree = "<group>"; };
-		6642F78E1A0212B700B0DB3A /* DRParseChapter+LocalFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DRParseChapter+LocalFile.m"; sourceTree = "<group>"; };
+		6642F78D1A0212B700B0DB3A /* DRParseChapter+LocalFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DRParseChapter+LocalFile.h"; path = "bookParse/DRParseChapter+LocalFile.h"; sourceTree = "<group>"; };
+		6642F78E1A0212B700B0DB3A /* DRParseChapter+LocalFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DRParseChapter+LocalFile.m"; path = "bookParse/DRParseChapter+LocalFile.m"; sourceTree = "<group>"; };
 		6642F78F1A0212B700B0DB3A /* NSString+replaceNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+replaceNumbers.h"; sourceTree = "<group>"; };
 		6642F7901A0212B700B0DB3A /* NSString+replaceNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+replaceNumbers.m"; sourceTree = "<group>"; };
-		6642F7911A0212B700B0DB3A /* DRParseChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRParseChapter.h; sourceTree = "<group>"; };
-		6642F7921A0212B700B0DB3A /* DRParseChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRParseChapter.m; sourceTree = "<group>"; };
+		6642F7911A0212B700B0DB3A /* DRParseChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DRParseChapter.h; path = bookParse/DRParseChapter.h; sourceTree = "<group>"; };
+		6642F7921A0212B700B0DB3A /* DRParseChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DRParseChapter.m; path = bookParse/DRParseChapter.m; sourceTree = "<group>"; };
 		664422991990ABC900C26AAE /* TextBookParse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextBookParse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6644229C1990ABC900C26AAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6644229E1990ABC900C26AAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,6 +113,81 @@
 		664422C51990ABC900C26AAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		664422C71990ABC900C26AAE /* TextBookParseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextBookParseTests.m; sourceTree = "<group>"; };
 		664422D51990B5A600C26AAE /* 天才相师.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "天才相师.txt"; sourceTree = "<group>"; };
+		665514991A0386A0009204CD /* DREpubBookParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DREpubBookParse.h; sourceTree = "<group>"; };
+		6655149A1A0386A0009204CD /* DREpubBookParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DREpubBookParse.m; sourceTree = "<group>"; };
+		6655149C1A0386D4009204CD /* DRBookParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBookParse.h; sourceTree = "<group>"; };
+		6655149D1A0386D4009204CD /* DRBookParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBookParse.m; sourceTree = "<group>"; };
+		666CA6C21A08653C0098688B /* KFEpubParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFEpubParser.h; sourceTree = "<group>"; };
+		666CA6C31A08653C0098688B /* KFEpubParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFEpubParser.m; sourceTree = "<group>"; };
+		666CA6C51A0865610098688B /* KFEpubConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFEpubConstants.h; sourceTree = "<group>"; };
+		666CA6C61A0865610098688B /* KFEpubConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFEpubConstants.m; sourceTree = "<group>"; };
+		666CA6C81A086CAC0098688B /* DREpubBookParseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DREpubBookParseTest.m; sourceTree = "<group>"; };
+		666CA6CC1A087ED20098688B /* 魔神紫星.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "魔神紫星.epub"; sourceTree = "<group>"; };
+		66A21E3A1A0773EF0076B2CF /* HTMLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLComment.h; sourceTree = "<group>"; };
+		66A21E3B1A0773EF0076B2CF /* HTMLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLComment.m; sourceTree = "<group>"; };
+		66A21E3C1A0773EF0076B2CF /* HTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLDocument.h; sourceTree = "<group>"; };
+		66A21E3D1A0773EF0076B2CF /* HTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLDocument.m; sourceTree = "<group>"; };
+		66A21E3E1A0773EF0076B2CF /* HTMLDocumentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLDocumentType.h; sourceTree = "<group>"; };
+		66A21E3F1A0773EF0076B2CF /* HTMLDocumentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLDocumentType.m; sourceTree = "<group>"; };
+		66A21E401A0773EF0076B2CF /* HTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLElement.h; sourceTree = "<group>"; };
+		66A21E411A0773EF0076B2CF /* HTMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLElement.m; sourceTree = "<group>"; };
+		66A21E421A0773EF0076B2CF /* HTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLEntities.h; sourceTree = "<group>"; };
+		66A21E431A0773EF0076B2CF /* HTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLEntities.m; sourceTree = "<group>"; };
+		66A21E441A0773EF0076B2CF /* HTMLNamespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNamespace.h; sourceTree = "<group>"; };
+		66A21E451A0773EF0076B2CF /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		66A21E461A0773EF0076B2CF /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		66A21E471A0773EF0076B2CF /* HTMLOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLOrderedDictionary.h; sourceTree = "<group>"; };
+		66A21E481A0773EF0076B2CF /* HTMLOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLOrderedDictionary.m; sourceTree = "<group>"; };
+		66A21E491A0773EF0076B2CF /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		66A21E4A1A0773EF0076B2CF /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		66A21E4B1A0773EF0076B2CF /* HTMLPreprocessedInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLPreprocessedInputStream.h; sourceTree = "<group>"; };
+		66A21E4C1A0773EF0076B2CF /* HTMLPreprocessedInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLPreprocessedInputStream.m; sourceTree = "<group>"; };
+		66A21E4D1A0773EF0076B2CF /* HTMLQuirksMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLQuirksMode.h; sourceTree = "<group>"; };
+		66A21E4E1A0773EF0076B2CF /* HTMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLReader.h; sourceTree = "<group>"; };
+		66A21E4F1A0773EF0076B2CF /* HTMLSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLSelector.h; sourceTree = "<group>"; };
+		66A21E501A0773EF0076B2CF /* HTMLSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLSelector.m; sourceTree = "<group>"; };
+		66A21E511A0773EF0076B2CF /* HTMLSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLSerialization.h; sourceTree = "<group>"; };
+		66A21E521A0773EF0076B2CF /* HTMLSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLSerialization.m; sourceTree = "<group>"; };
+		66A21E531A0773EF0076B2CF /* HTMLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLString.h; sourceTree = "<group>"; };
+		66A21E541A0773EF0076B2CF /* HTMLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLString.m; sourceTree = "<group>"; };
+		66A21E551A0773EF0076B2CF /* HTMLSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLSupport.h; sourceTree = "<group>"; };
+		66A21E561A0773EF0076B2CF /* HTMLTextNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTextNode.h; sourceTree = "<group>"; };
+		66A21E571A0773EF0076B2CF /* HTMLTextNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLTextNode.m; sourceTree = "<group>"; };
+		66A21E581A0773EF0076B2CF /* HTMLTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTokenizer.h; sourceTree = "<group>"; };
+		66A21E591A0773EF0076B2CF /* HTMLTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLTokenizer.m; sourceTree = "<group>"; };
+		66A21E5A1A0773EF0076B2CF /* HTMLTokenizerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTokenizerState.h; sourceTree = "<group>"; };
+		66A21E5B1A0773EF0076B2CF /* HTMLTreeEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTreeEnumerator.h; sourceTree = "<group>"; };
+		66A21E5C1A0773EF0076B2CF /* HTMLTreeEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLTreeEnumerator.m; sourceTree = "<group>"; };
+		66A21E5D1A0773EF0076B2CF /* NSString+HTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTMLEntities.h"; sourceTree = "<group>"; };
+		66A21E5E1A0773EF0076B2CF /* NSString+HTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTMLEntities.m"; sourceTree = "<group>"; };
+		66A21E611A0773EF0076B2CF /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
+		66A21E621A0773EF0076B2CF /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		66A21E641A0773EF0076B2CF /* NSString+DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDXML.h"; sourceTree = "<group>"; };
+		66A21E651A0773EF0076B2CF /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
+		66A21E661A0773EF0076B2CF /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
+		66A21E671A0773EF0076B2CF /* DDXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLDocument.h; sourceTree = "<group>"; };
+		66A21E681A0773EF0076B2CF /* DDXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLDocument.m; sourceTree = "<group>"; };
+		66A21E691A0773EF0076B2CF /* DDXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElement.h; sourceTree = "<group>"; };
+		66A21E6A1A0773EF0076B2CF /* DDXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElement.m; sourceTree = "<group>"; };
+		66A21E6B1A0773EF0076B2CF /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
+		66A21E6C1A0773EF0076B2CF /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
+		66A21E6E1A0773EF0076B2CF /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
+		66A21E711A0773F00076B2CF /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		66A21E721A0773F00076B2CF /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		66A21E731A0773F00076B2CF /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		66A21E741A0773F00076B2CF /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		66A21E751A0773F00076B2CF /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		66A21E761A0773F00076B2CF /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		66A21E771A0773F00076B2CF /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		66A21E781A0773F00076B2CF /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		66A21E791A0773F00076B2CF /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		66A21E7A1A0773F00076B2CF /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		66A21E7B1A0773F00076B2CF /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		66A21E961A07742A0076B2CF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		66A21E981A0774F50076B2CF /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		66BAA4521A0A057B00CD8FD5 /* KFEpubParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFEpubParserTest.m; sourceTree = "<group>"; };
+		66D0ED371A0B467D00586EBE /* DRParseChapterContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRParseChapterContent.h; sourceTree = "<group>"; };
+		66DE6E4F1A0CA47000F59E4F /* DRParseChapterKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRParseChapterKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +195,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A21E991A0774F50076B2CF /* libz.1.2.5.dylib in Frameworks */,
+				66A21E971A07742A0076B2CF /* libxml2.dylib in Frameworks */,
 				6644229F1990ABC900C26AAE /* CoreGraphics.framework in Frameworks */,
 				664422A11990ABC900C26AAE /* UIKit.framework in Frameworks */,
 				6644229D1990ABC900C26AAE /* Foundation.framework in Frameworks */,
@@ -92,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66BAA4541A0A073800CD8FD5 /* libxml2.dylib in Frameworks */,
 				664422BC1990ABC900C26AAE /* XCTest.framework in Frameworks */,
 				664422BE1990ABC900C26AAE /* UIKit.framework in Frameworks */,
 				664422BD1990ABC900C26AAE /* Foundation.framework in Frameworks */,
@@ -123,6 +239,8 @@
 		6644229B1990ABC900C26AAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66A21E981A0774F50076B2CF /* libz.1.2.5.dylib */,
+				66A21E961A07742A0076B2CF /* libxml2.dylib */,
 				6644229C1990ABC900C26AAE /* Foundation.framework */,
 				6644229E1990ABC900C26AAE /* CoreGraphics.framework */,
 				664422A01990ABC900C26AAE /* UIKit.framework */,
@@ -134,6 +252,15 @@
 		664422A21990ABC900C26AAE /* TextBookParse */ = {
 			isa = PBXGroup;
 			children = (
+				66D0ED371A0B467D00586EBE /* DRParseChapterContent.h */,
+				6655149C1A0386D4009204CD /* DRBookParse.h */,
+				6655149D1A0386D4009204CD /* DRBookParse.m */,
+				66DE6E4F1A0CA47000F59E4F /* DRParseChapterKit.h */,
+				6642F7911A0212B700B0DB3A /* DRParseChapter.h */,
+				6642F7921A0212B700B0DB3A /* DRParseChapter.m */,
+				6642F78D1A0212B700B0DB3A /* DRParseChapter+LocalFile.h */,
+				6642F78E1A0212B700B0DB3A /* DRParseChapter+LocalFile.m */,
+				665514981A038666009204CD /* epubParse */,
 				664422D11990AC1500C26AAE /* bookParse */,
 				664422AB1990ABC900C26AAE /* AppDelegate.h */,
 				664422AC1990ABC900C26AAE /* AppDelegate.m */,
@@ -149,6 +276,7 @@
 		664422A31990ABC900C26AAE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				666CA6CC1A087ED20098688B /* 魔神紫星.epub */,
 				664422D51990B5A600C26AAE /* 天才相师.txt */,
 				664422A41990ABC900C26AAE /* TextBookParse-Info.plist */,
 				664422A51990ABC900C26AAE /* InfoPlist.strings */,
@@ -185,15 +313,142 @@
 				6642F78A1A0212B700B0DB3A /* DRTextBookParse.m */,
 				6642F78B1A0212B700B0DB3A /* NSData+encoding.h */,
 				6642F78C1A0212B700B0DB3A /* NSData+encoding.m */,
-				6642F78D1A0212B700B0DB3A /* DRParseChapter+LocalFile.h */,
-				6642F78E1A0212B700B0DB3A /* DRParseChapter+LocalFile.m */,
 				6642F78F1A0212B700B0DB3A /* NSString+replaceNumbers.h */,
 				6642F7901A0212B700B0DB3A /* NSString+replaceNumbers.m */,
-				6642F7911A0212B700B0DB3A /* DRParseChapter.h */,
-				6642F7921A0212B700B0DB3A /* DRParseChapter.m */,
 				6628B69F19D7DD410050DE12 /* NSString+replaceNumbersTest.m */,
 			);
 			path = bookParse;
+			sourceTree = "<group>";
+		};
+		665514981A038666009204CD /* epubParse */ = {
+			isa = PBXGroup;
+			children = (
+				66A21E391A0773EF0076B2CF /* htmlParse */,
+				66A21E5F1A0773EF0076B2CF /* KissXML */,
+				66A21E6F1A0773EF0076B2CF /* SSZipArchive */,
+				665514991A0386A0009204CD /* DREpubBookParse.h */,
+				6655149A1A0386A0009204CD /* DREpubBookParse.m */,
+				666CA6C81A086CAC0098688B /* DREpubBookParseTest.m */,
+				666CA6C51A0865610098688B /* KFEpubConstants.h */,
+				666CA6C61A0865610098688B /* KFEpubConstants.m */,
+				666CA6C21A08653C0098688B /* KFEpubParser.h */,
+				666CA6C31A08653C0098688B /* KFEpubParser.m */,
+				66BAA4521A0A057B00CD8FD5 /* KFEpubParserTest.m */,
+			);
+			path = epubParse;
+			sourceTree = "<group>";
+		};
+		66A21E391A0773EF0076B2CF /* htmlParse */ = {
+			isa = PBXGroup;
+			children = (
+				66A21E3A1A0773EF0076B2CF /* HTMLComment.h */,
+				66A21E3B1A0773EF0076B2CF /* HTMLComment.m */,
+				66A21E3C1A0773EF0076B2CF /* HTMLDocument.h */,
+				66A21E3D1A0773EF0076B2CF /* HTMLDocument.m */,
+				66A21E3E1A0773EF0076B2CF /* HTMLDocumentType.h */,
+				66A21E3F1A0773EF0076B2CF /* HTMLDocumentType.m */,
+				66A21E401A0773EF0076B2CF /* HTMLElement.h */,
+				66A21E411A0773EF0076B2CF /* HTMLElement.m */,
+				66A21E421A0773EF0076B2CF /* HTMLEntities.h */,
+				66A21E431A0773EF0076B2CF /* HTMLEntities.m */,
+				66A21E441A0773EF0076B2CF /* HTMLNamespace.h */,
+				66A21E451A0773EF0076B2CF /* HTMLNode.h */,
+				66A21E461A0773EF0076B2CF /* HTMLNode.m */,
+				66A21E471A0773EF0076B2CF /* HTMLOrderedDictionary.h */,
+				66A21E481A0773EF0076B2CF /* HTMLOrderedDictionary.m */,
+				66A21E491A0773EF0076B2CF /* HTMLParser.h */,
+				66A21E4A1A0773EF0076B2CF /* HTMLParser.m */,
+				66A21E4B1A0773EF0076B2CF /* HTMLPreprocessedInputStream.h */,
+				66A21E4C1A0773EF0076B2CF /* HTMLPreprocessedInputStream.m */,
+				66A21E4D1A0773EF0076B2CF /* HTMLQuirksMode.h */,
+				66A21E4E1A0773EF0076B2CF /* HTMLReader.h */,
+				66A21E4F1A0773EF0076B2CF /* HTMLSelector.h */,
+				66A21E501A0773EF0076B2CF /* HTMLSelector.m */,
+				66A21E511A0773EF0076B2CF /* HTMLSerialization.h */,
+				66A21E521A0773EF0076B2CF /* HTMLSerialization.m */,
+				66A21E531A0773EF0076B2CF /* HTMLString.h */,
+				66A21E541A0773EF0076B2CF /* HTMLString.m */,
+				66A21E551A0773EF0076B2CF /* HTMLSupport.h */,
+				66A21E561A0773EF0076B2CF /* HTMLTextNode.h */,
+				66A21E571A0773EF0076B2CF /* HTMLTextNode.m */,
+				66A21E581A0773EF0076B2CF /* HTMLTokenizer.h */,
+				66A21E591A0773EF0076B2CF /* HTMLTokenizer.m */,
+				66A21E5A1A0773EF0076B2CF /* HTMLTokenizerState.h */,
+				66A21E5B1A0773EF0076B2CF /* HTMLTreeEnumerator.h */,
+				66A21E5C1A0773EF0076B2CF /* HTMLTreeEnumerator.m */,
+				66A21E5D1A0773EF0076B2CF /* NSString+HTMLEntities.h */,
+				66A21E5E1A0773EF0076B2CF /* NSString+HTMLEntities.m */,
+			);
+			path = htmlParse;
+			sourceTree = "<group>";
+		};
+		66A21E5F1A0773EF0076B2CF /* KissXML */ = {
+			isa = PBXGroup;
+			children = (
+				66A21E601A0773EF0076B2CF /* Additions */,
+				66A21E631A0773EF0076B2CF /* Categories */,
+				66A21E661A0773EF0076B2CF /* DDXML.h */,
+				66A21E671A0773EF0076B2CF /* DDXMLDocument.h */,
+				66A21E681A0773EF0076B2CF /* DDXMLDocument.m */,
+				66A21E691A0773EF0076B2CF /* DDXMLElement.h */,
+				66A21E6A1A0773EF0076B2CF /* DDXMLElement.m */,
+				66A21E6B1A0773EF0076B2CF /* DDXMLNode.h */,
+				66A21E6C1A0773EF0076B2CF /* DDXMLNode.m */,
+				66A21E6D1A0773EF0076B2CF /* Private */,
+			);
+			path = KissXML;
+			sourceTree = "<group>";
+		};
+		66A21E601A0773EF0076B2CF /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				66A21E611A0773EF0076B2CF /* DDXMLElementAdditions.h */,
+				66A21E621A0773EF0076B2CF /* DDXMLElementAdditions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		66A21E631A0773EF0076B2CF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				66A21E641A0773EF0076B2CF /* NSString+DDXML.h */,
+				66A21E651A0773EF0076B2CF /* NSString+DDXML.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		66A21E6D1A0773EF0076B2CF /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				66A21E6E1A0773EF0076B2CF /* DDXMLPrivate.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		66A21E6F1A0773EF0076B2CF /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				66A21E701A0773F00076B2CF /* minizip */,
+				66A21E7A1A0773F00076B2CF /* SSZipArchive.h */,
+				66A21E7B1A0773F00076B2CF /* SSZipArchive.m */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		66A21E701A0773F00076B2CF /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				66A21E711A0773F00076B2CF /* crypt.h */,
+				66A21E721A0773F00076B2CF /* ioapi.c */,
+				66A21E731A0773F00076B2CF /* ioapi.h */,
+				66A21E741A0773F00076B2CF /* mztools.c */,
+				66A21E751A0773F00076B2CF /* mztools.h */,
+				66A21E761A0773F00076B2CF /* unzip.c */,
+				66A21E771A0773F00076B2CF /* unzip.h */,
+				66A21E781A0773F00076B2CF /* zip.c */,
+				66A21E791A0773F00076B2CF /* zip.h */,
+			);
+			path = minizip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +530,7 @@
 				664422D61990B5A600C26AAE /* 天才相师.txt in Resources */,
 				664422B51990ABC900C26AAE /* Images.xcassets in Resources */,
 				664422A71990ABC900C26AAE /* InfoPlist.strings in Resources */,
+				666CA6CD1A087ED20098688B /* 魔神紫星.epub in Resources */,
 				664422B01990ABC900C26AAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,15 +550,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D0ED381A0B469A00586EBE /* DRParseChapterContent.h in Sources */,
+				66A21E7C1A0773F00076B2CF /* HTMLComment.m in Sources */,
+				66A21E931A0773F00076B2CF /* unzip.c in Sources */,
 				6642F7931A0212B700B0DB3A /* DDFileReader.m in Sources */,
 				6642F7951A0212B700B0DB3A /* NSData+encoding.m in Sources */,
+				66A21E8F1A0773F00076B2CF /* DDXMLElement.m in Sources */,
+				66A21E801A0773F00076B2CF /* HTMLEntities.m in Sources */,
+				66A21E901A0773F00076B2CF /* DDXMLNode.m in Sources */,
+				66A21E8C1A0773F00076B2CF /* DDXMLElementAdditions.m in Sources */,
 				664422B31990ABC900C26AAE /* ViewController.m in Sources */,
 				6642F7941A0212B700B0DB3A /* DRTextBookParse.m in Sources */,
+				66A21E831A0773F00076B2CF /* HTMLParser.m in Sources */,
 				664422AD1990ABC900C26AAE /* AppDelegate.m in Sources */,
+				6655149E1A0386D4009204CD /* DRBookParse.m in Sources */,
+				66A21E881A0773F00076B2CF /* HTMLTextNode.m in Sources */,
+				66A21E7F1A0773F00076B2CF /* HTMLElement.m in Sources */,
+				66A21E7E1A0773F00076B2CF /* HTMLDocumentType.m in Sources */,
+				666CA6C71A0865610098688B /* KFEpubConstants.m in Sources */,
+				66A21E7D1A0773F00076B2CF /* HTMLDocument.m in Sources */,
 				664422A91990ABC900C26AAE /* main.m in Sources */,
+				66A21E821A0773F00076B2CF /* HTMLOrderedDictionary.m in Sources */,
+				666CA6C41A08653C0098688B /* KFEpubParser.m in Sources */,
+				66A21E8E1A0773F00076B2CF /* DDXMLDocument.m in Sources */,
+				66A21E871A0773F00076B2CF /* HTMLString.m in Sources */,
+				66A21E941A0773F00076B2CF /* zip.c in Sources */,
 				6642F7981A0212B700B0DB3A /* DRParseChapter.m in Sources */,
 				6642F7961A0212B700B0DB3A /* DRParseChapter+LocalFile.m in Sources */,
+				66A21E851A0773F00076B2CF /* HTMLSelector.m in Sources */,
+				66A21E8B1A0773F00076B2CF /* NSString+HTMLEntities.m in Sources */,
+				66A21E921A0773F00076B2CF /* mztools.c in Sources */,
+				66A21E861A0773F00076B2CF /* HTMLSerialization.m in Sources */,
+				66A21E8A1A0773F00076B2CF /* HTMLTreeEnumerator.m in Sources */,
+				66A21E841A0773F00076B2CF /* HTMLPreprocessedInputStream.m in Sources */,
+				66A21E8D1A0773F00076B2CF /* NSString+DDXML.m in Sources */,
 				6642F7971A0212B700B0DB3A /* NSString+replaceNumbers.m in Sources */,
+				66A21E891A0773F00076B2CF /* HTMLTokenizer.m in Sources */,
+				66A21E911A0773F00076B2CF /* ioapi.c in Sources */,
+				66A21E811A0773F00076B2CF /* HTMLNode.m in Sources */,
+				6655149B1A0386A0009204CD /* DREpubBookParse.m in Sources */,
+				66A21E951A0773F00076B2CF /* SSZipArchive.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,8 +597,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D0ED391A0B469F00586EBE /* DRParseChapterContent.h in Sources */,
+				666CA6C91A086CAC0098688B /* DREpubBookParseTest.m in Sources */,
 				664422C81990ABC900C26AAE /* TextBookParseTests.m in Sources */,
 				6628B6A019D7DD410050DE12 /* NSString+replaceNumbersTest.m in Sources */,
+				66BAA4531A0A057B00CD8FD5 /* KFEpubParserTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,9 +720,16 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextBookParse/TextBookParse-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "TextBookParse/TextBookParse-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -444,9 +741,16 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextBookParse/TextBookParse-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "TextBookParse/TextBookParse-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -466,9 +770,21 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "TextBookParseTests/TextBookParseTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -484,9 +800,21 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextBookParse/TextBookParse-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "TextBookParseTests/TextBookParseTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

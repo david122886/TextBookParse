@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2A3442A498E23A9BD95BF5CEEE89FD7AEC77CA48</key>
-		<string>ssh://github.com/david122886/TextBookParse.git</string>
+		<string>github.com:david122886/TextBookParse.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TextBookParse.xcodeproj/project.xcworkspace</string>
+	<string>TextBookParse.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2A3442A498E23A9BD95BF5CEEE89FD7AEC77CA48</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/david122886/TextBookParse.git</string>
+	<string>github.com:david122886/TextBookParse.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DRParseChapterContent.h"
 ///解析出来的章节信息
 @interface DRParseChapter : NSObject
-@property (assign,nonatomic) int index;
+@property (assign,nonatomic) NSInteger index;
 @property (strong,nonatomic) NSString *chapterName;
+@property (assign,nonatomic) BookRootDicType bookFileType;
+@property (assign,nonatomic) BOOL isEndChapter;
+#pragma mark txt书籍特有属性
 @property (assign,nonatomic)  unsigned long long chapterStartIndex;
 @property (assign,nonatomic)  unsigned long long chapterEndIndex;
-@property (assign,nonatomic) BOOL isEndChapter;
+
+#pragma mark epub书籍特有属性
+@property (strong,nonatomic) NSString *epubChapterFilePath;
+///是否是epub指定目录,因为epub有些章节内容没有在目录中
+@property (assign,nonatomic) BOOL isEpubCatalog;
 @end

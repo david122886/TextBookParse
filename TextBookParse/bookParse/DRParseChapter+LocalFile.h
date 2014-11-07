@@ -11,6 +11,9 @@
 @interface DRParseChapter (LocalFile)
 +(void)writeDRParseChaptersArray:(NSArray*)parseChapterArr ToPlistFileWithPlistFilePath:(NSString*)plistFilePath;
 
++(void)writeDRParseChaptersArray:(NSArray*)parseChapterArr withCoverFilePath:(NSString*)coverPath withBookName:(NSString*)bookName withAuthor:(NSString*)author ToPlistFileWithPlistFilePath:(NSString*)plistFilePath;
+
 +(NSArray*)parseChapterArrayFromPlistFilePath:(NSString*)plistFilePath;
 
++(NSDictionary*)parseChapterDicFromPlistFilePath:(NSString*)plistFilePath;
 @end

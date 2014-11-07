@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
             endingLineNumber = "88"
-            landmarkName = "+parseBookWithBookFilePath:findTheChapterBlock:withComplete:withFailure:"
+            landmarkName = "+sortFiles:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -111,8 +111,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
             endingLineNumber = "60"
-            landmarkName = "+parseBookWithBookFilePath:findTheChapterBlock:withComplete:withFailure:"
-            landmarkType = "5">
+            landmarkName = "@implementation DRTextBookParse"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TextBookParse/ViewController.m"
-            timestampString = "433588897.667103"
+            timestampString = "436764627.881706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -143,8 +143,38 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "197"
             endingLineNumber = "197"
-            landmarkName = "+parseBookWithBookFilePath:loadFirstChapter:progressBlock:withComplete:withFailure:"
+            landmarkName = "+parseBookWithBookFilePath:findTheChapterBlock:withComplete:withFailure:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__90+[DRTextBookParse parseBookWithBookFilePath:findTheChapterBlock:withComplete:withFailure:]_block_invoke"
+                  moduleName = "TextBookParse"
+                  urlString = "file:///Users/xxsy-ima001/Documents/projectsDemo/TextBookParse/TextBookParse/bookParse/DRTextBookParse.m"
+                  timestampString = "437035786.342658"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "197"
+                  endingLineNumber = "197"
+                  offsetFromSymbolStart = "3953">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__90+[DRTextBookParse parseBookWithBookFilePath:findTheChapterBlock:withComplete:withFailure:]_block_invoke151"
+                  moduleName = "TextBookParse"
+                  urlString = "file:///Users/xxsy-ima001/Documents/projectsDemo/TextBookParse/TextBookParse/bookParse/DRTextBookParse.m"
+                  timestampString = "437035786.34282"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "197"
+                  endingLineNumber = "197"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -159,7 +189,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "237"
             endingLineNumber = "237"
-            landmarkName = "+parseBookWithBookFilePath:loadFirstChapter:progressBlock:withComplete:withFailure:"
+            landmarkName = "+parseBookWithBookFilePath:withStartChapterIndex:loadFirstChapter:progressBlock:withComplete:withFailure:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -175,7 +205,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "239"
             endingLineNumber = "239"
-            landmarkName = "+parseBookWithBookFilePath:loadFirstChapter:progressBlock:withComplete:withFailure:"
+            landmarkName = "+parseBookWithBookFilePath:withStartChapterIndex:loadFirstChapter:progressBlock:withComplete:withFailure:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -207,7 +237,39 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
             endingLineNumber = "199"
-            landmarkName = "+parseBookWithBookFilePath:loadFirstChapter:progressBlock:withComplete:withFailure:"
+            landmarkName = "+parseBookWithBookFilePath:findTheChapterBlock:withComplete:withFailure:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TextBookParse/epubParse/KFEpubParser.m"
+            timestampString = "436871334.968086"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "390"
+            endingLineNumber = "390"
+            landmarkName = "-ncxFromDocument:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TextBookParse/epubParse/DREpubBookParse.m"
+            timestampString = "437034217.55858"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "+parseBookWithBookFilePath:withComplete:withFailure:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

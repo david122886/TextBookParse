@@ -53,7 +53,7 @@ readLength,unsigned long long totalLength,DRParseChapter *findChapter);
         return nil;
     }
     //指向文件目录
-    NSString *parseBookDic = [[filePath stringByDeletingLastPathComponent] stringByAppendingPathComponent:[NSString stringWithFormat:@".david_%@",[[filePath stringByDeletingPathExtension] lastPathComponent]]];
+    NSString *parseBookDic = [[filePath stringByDeletingLastPathComponent] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_%@",kbookTypeTEXT,[[filePath stringByDeletingPathExtension] lastPathComponent]]];
     return parseBookDic;
 }
 
