@@ -50,5 +50,8 @@
 - (NSArray *)ncxFromDocument:(DDXMLDocument *)document;
 
 ///获取目录列表，章节数量比spine获取到章节少
-- (NSArray *)catalogFromDocumentForCatalogFileURL:(NSURL*)catalogFileURL;
+- (NSArray *)catalogFromDocumentForCatalogFilePath:(NSString*)catalogFilePath;
+
+///返回html解析内容，image 对应图片path，content对应纯文本
++(NSArray*)contentFromHTMLDocumentForHtmlFilePath:(NSString*)filePath;
 @end

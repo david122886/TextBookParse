@@ -391,8 +391,9 @@
 }
 
 ///获取目录列表，章节数量比spine获取到章节少
-- (NSArray *)catalogFromDocumentForCatalogFileURL:(NSURL*)catalogFileURL{
-    HTMLDocument *document = [HTMLDocument documentWithString:[[NSString alloc] initWithContentsOfURL:catalogFileURL encoding:NSUTF8StringEncoding error:nil]];
+- (NSArray *)catalogFromDocumentForCatalogFilePath:(NSString*)catalogFilePath{
+    
+    HTMLDocument *document = [HTMLDocument documentWithString:[[NSString alloc] initWithContentsOfFile:catalogFilePath encoding:NSUTF8StringEncoding error:nil]];
     if (!document) {
         return nil;
     }
@@ -408,5 +409,33 @@
         [chapterArray addObject:@{@"text":chapterName,@"src":src}];
     }
     return chapterArray;
+}
+
+///返回html解析内容，image 对应图片path，content对应纯文本
++(NSArray*)contentFromHTMLDocumentForHtmlFilePath:(NSString*)filePath{
+    NSString *data = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    if (!data) {
+        return nil;
+    }
+    HTMLDocument *doc = [HTMLDocument documentWithString:data];
+    HTMLElement *body = [doc firstNodeMatchingSelector:@"body"];
+    if (!body) {
+        return nil;
+    }
+    NSMutableArray *contents = [NSMutableArray array];
+    NSArray *childenNodes = [body nodesMatchingSelector:@"*"];
+    for (HTMLElement *node in childenNodes) {
+        if ([[node.tagName lowercaseString] isEqualToString:@"p"]) {
+            if (node.textContent) {
+                [contents addObject:@{@"content":[NSString stringWithFormat:@"%@\n",node.textContent]}];
+            }
+        }
+        if ([[node.tagName lowercaseString] isEqualToString:@"p"] && node.attributes[@"src"]) {
+            if (node.attributes[@"src"]) {
+                [contents addObject:@{@"url":node.attributes[@"src"]}];
+            }
+        }
+    }
+    return contents;
 }
 @end

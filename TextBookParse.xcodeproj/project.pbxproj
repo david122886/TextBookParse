@@ -28,13 +28,13 @@
 		664422BE1990ABC900C26AAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664422A01990ABC900C26AAE /* UIKit.framework */; };
 		664422C61990ABC900C26AAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 664422C41990ABC900C26AAE /* InfoPlist.strings */; };
 		664422C81990ABC900C26AAE /* TextBookParseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 664422C71990ABC900C26AAE /* TextBookParseTests.m */; };
-		664422D61990B5A600C26AAE /* 天才相师.txt in Resources */ = {isa = PBXBuildFile; fileRef = 664422D51990B5A600C26AAE /* 天才相师.txt */; };
+		66447B311A19D53600247E18 /* Section0002_0001_0012_0001.xhtml in Resources */ = {isa = PBXBuildFile; fileRef = 66447B301A19D53600247E18 /* Section0002_0001_0012_0001.xhtml */; };
+		66447B321A19D53600247E18 /* Section0002_0001_0012_0001.xhtml in Resources */ = {isa = PBXBuildFile; fileRef = 66447B301A19D53600247E18 /* Section0002_0001_0012_0001.xhtml */; };
 		6655149B1A0386A0009204CD /* DREpubBookParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6655149A1A0386A0009204CD /* DREpubBookParse.m */; };
 		6655149E1A0386D4009204CD /* DRBookParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6655149D1A0386D4009204CD /* DRBookParse.m */; };
 		666CA6C41A08653C0098688B /* KFEpubParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 666CA6C31A08653C0098688B /* KFEpubParser.m */; };
 		666CA6C71A0865610098688B /* KFEpubConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 666CA6C61A0865610098688B /* KFEpubConstants.m */; };
 		666CA6C91A086CAC0098688B /* DREpubBookParseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 666CA6C81A086CAC0098688B /* DREpubBookParseTest.m */; };
-		666CA6CD1A087ED20098688B /* 魔神紫星.epub in Resources */ = {isa = PBXBuildFile; fileRef = 666CA6CC1A087ED20098688B /* 魔神紫星.epub */; };
 		66A21E7C1A0773F00076B2CF /* HTMLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E3B1A0773EF0076B2CF /* HTMLComment.m */; };
 		66A21E7D1A0773F00076B2CF /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E3D1A0773EF0076B2CF /* HTMLDocument.m */; };
 		66A21E7E1A0773F00076B2CF /* HTMLDocumentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A21E3F1A0773EF0076B2CF /* HTMLDocumentType.m */; };
@@ -112,7 +112,7 @@
 		664422C31990ABC900C26AAE /* TextBookParseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextBookParseTests-Info.plist"; sourceTree = "<group>"; };
 		664422C51990ABC900C26AAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		664422C71990ABC900C26AAE /* TextBookParseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextBookParseTests.m; sourceTree = "<group>"; };
-		664422D51990B5A600C26AAE /* 天才相师.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "天才相师.txt"; sourceTree = "<group>"; };
+		66447B301A19D53600247E18 /* Section0002_0001_0012_0001.xhtml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Section0002_0001_0012_0001.xhtml; sourceTree = "<group>"; };
 		665514991A0386A0009204CD /* DREpubBookParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DREpubBookParse.h; sourceTree = "<group>"; };
 		6655149A1A0386A0009204CD /* DREpubBookParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DREpubBookParse.m; sourceTree = "<group>"; };
 		6655149C1A0386D4009204CD /* DRBookParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBookParse.h; sourceTree = "<group>"; };
@@ -122,7 +122,6 @@
 		666CA6C51A0865610098688B /* KFEpubConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFEpubConstants.h; sourceTree = "<group>"; };
 		666CA6C61A0865610098688B /* KFEpubConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFEpubConstants.m; sourceTree = "<group>"; };
 		666CA6C81A086CAC0098688B /* DREpubBookParseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DREpubBookParseTest.m; sourceTree = "<group>"; };
-		666CA6CC1A087ED20098688B /* 魔神紫星.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "魔神紫星.epub"; sourceTree = "<group>"; };
 		66A21E3A1A0773EF0076B2CF /* HTMLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLComment.h; sourceTree = "<group>"; };
 		66A21E3B1A0773EF0076B2CF /* HTMLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLComment.m; sourceTree = "<group>"; };
 		66A21E3C1A0773EF0076B2CF /* HTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLDocument.h; sourceTree = "<group>"; };
@@ -276,10 +275,9 @@
 		664422A31990ABC900C26AAE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				666CA6CC1A087ED20098688B /* 魔神紫星.epub */,
-				664422D51990B5A600C26AAE /* 天才相师.txt */,
 				664422A41990ABC900C26AAE /* TextBookParse-Info.plist */,
 				664422A51990ABC900C26AAE /* InfoPlist.strings */,
+				66447B301A19D53600247E18 /* Section0002_0001_0012_0001.xhtml */,
 				664422A81990ABC900C26AAE /* main.m */,
 				664422AA1990ABC900C26AAE /* TextBookParse-Prefix.pch */,
 			);
@@ -527,10 +525,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				664422D61990B5A600C26AAE /* 天才相师.txt in Resources */,
+				66447B311A19D53600247E18 /* Section0002_0001_0012_0001.xhtml in Resources */,
 				664422B51990ABC900C26AAE /* Images.xcassets in Resources */,
 				664422A71990ABC900C26AAE /* InfoPlist.strings in Resources */,
-				666CA6CD1A087ED20098688B /* 魔神紫星.epub in Resources */,
 				664422B01990ABC900C26AAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +536,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66447B321A19D53600247E18 /* Section0002_0001_0012_0001.xhtml in Resources */,
 				664422C61990ABC900C26AAE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

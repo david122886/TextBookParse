@@ -7,12 +7,12 @@
 //
 
 #import "AppDelegate.h"
-
+#import "DREpubBookParse.h"
+#import "HTMLReader.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     return YES;
 }
 							

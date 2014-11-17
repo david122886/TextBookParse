@@ -21,4 +21,6 @@
 
 ///获取书籍格式
 +(BookRootDicType)getParsedBookTypeWithBookFilePath:(NSString *)filePath;
+
++(NSURL*)getAppDocumentPath;
 @end

@@ -42,4 +42,9 @@
     }
     return BookRootDicType_OTHER;
 }
+
++(NSURL*)getAppDocumentPath{
+    NSArray *urls = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    return [urls firstObject];
+}
 @end

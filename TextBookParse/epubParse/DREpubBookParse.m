@@ -94,29 +94,32 @@
     NSDictionary *metaDataDic = [parser metaDataFromDocument:document];
     NSString *author = metaDataDic[@"creator"];
     NSString *bookName = metaDataDic[@"title"];
-    NSURL *coverUrl = nil;
-    NSURL *catalogUrl = nil;
-    NSURL *ncxUrl = nil;
+    NSString *coverPath = nil;
+    NSString *catalogPath = nil;
+    NSString *ncxPath = nil;
     NSInteger index = 0;
     NSMutableArray *parseChapterArray = [[NSMutableArray alloc] init];
-    
+    NSString *docPath = [rootFile.path stringByReplacingOccurrencesOfString:[self getAppDocumentPath].path withString:@""];
+    if (docPath.length > 0) {
+        docPath = [docPath stringByReplacingCharactersInRange:(NSRange){0,1} withString:@""];
+    }
     NSArray *spineArray = [parser spineFromDocument:document];
     for (NSString *key in spineArray) {
         NSString *contentFile = manifestDic[key][@"href"];
-        NSURL *contentURL = [[rootFile URLByDeletingLastPathComponent] URLByAppendingPathComponent:contentFile];
+        NSString *contentPath = [[docPath stringByDeletingLastPathComponent] stringByAppendingPathComponent:contentFile];
         if ([key isEqualToString:@"catalog"]) {
-            catalogUrl = contentURL;
+            catalogPath = contentPath;
         }else
         if ([key isEqualToString:@"cover"]) {
-            coverUrl = contentURL;
+            coverPath = contentPath;
         }else
         if ([key isEqualToString:@"ncx"]) {
-            ncxUrl = contentURL;
+            ncxPath = contentPath;
         }else{
             DRParseChapter *chapter = [[DRParseChapter alloc] init];
             chapter.index = index++;
             chapter.bookFileType = BookRootDicType_EPUB;
-            chapter.epubChapterFilePath = contentURL.path;
+            chapter.epubChapterFilePath = contentPath;
             chapter.isEndChapter = NO;
             chapter.isEpubCatalog = NO;
             [parseChapterArray addObject:chapter];
@@ -126,19 +129,8 @@
     lastChapter.isEndChapter = YES;
     
     NSArray *parseCatalogArray = nil;
-    if (catalogUrl) {
-        parseCatalogArray = [parser catalogFromDocumentForCatalogFileURL:catalogUrl];
-        for (DRParseChapter *chapter in parseChapterArray) {
-            for (NSDictionary *dic in parseCatalogArray) {
-                NSURL *src = [[catalogUrl URLByDeletingLastPathComponent] URLByAppendingPathComponent:dic[@"src"]];
-                if ([src.path isEqualToString:chapter.epubChapterFilePath]) {
-                    chapter.isEpubCatalog = YES;
-                    chapter.chapterName = dic[@"text"];
-                    break;
-                }
-            }
-        }
-        
+    if (catalogPath) {
+        parseCatalogArray = [parser catalogFromDocumentForCatalogFilePath:[[self getAppDocumentPath].path stringByAppendingPathComponent:catalogPath]];
     }
     
 //    NSArray *parseChapterNameArray = nil;
@@ -146,9 +138,9 @@
 //        DDXMLDocument *ncxDoc = [[DDXMLDocument alloc] initWithXMLString:[[NSString alloc] initWithContentsOfURL:ncxUrl encoding:NSUTF8StringEncoding error:nil] options:kNilOptions error:nil];
 //        parseChapterNameArray = [parser ncxFromDocument:ncxDoc];
 //    }
-    [DRParseChapter writeDRParseChaptersArray:parseChapterArray withCoverFilePath:coverUrl.path withBookName:bookName withAuthor:author ToPlistFileWithPlistFilePath:[parsedBookDic stringByAppendingPathComponent:kBookChapterArrayFileName]];
+    [DRParseChapter writeDRParseChaptersArray:parseChapterArray withCoverFilePath:coverPath withBookName:bookName withAuthor:author ToPlistFileWithPlistFilePath:[parsedBookDic stringByAppendingPathComponent:kBookChapterArrayFileName]];
     if (success) {
-        success(parseChapterArray,bookName,coverUrl.path,author);
+        success(parseChapterArray,bookName,coverPath,author);
     }
 }
 

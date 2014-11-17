@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "KFEpubParser.h"
+#import "HTMLReader.h"
 @interface KFEpubParserTest : XCTestCase
 
 @end
@@ -37,4 +38,29 @@
     }];
 }
 
+
+-(void)testHtmlParse{
+    NSString *data = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Section0002_0001_0012_0001" ofType:@"xhtml"] encoding:NSUTF8StringEncoding error:nil];
+    if (!data) {
+        return ;
+    }
+    HTMLDocument *doc = [HTMLDocument documentWithString:data];
+    HTMLElement *body = [doc firstNodeMatchingSelector:@"body"];
+    NSArray *imgNodes = [body nodesMatchingSelector:@"img[src]"];
+    NSArray *pNodes = [body nodesMatchingSelector:@"*"];
+    
+    NSMutableArray *ps = [NSMutableArray array];
+    NSMutableArray *imgs = [NSMutableArray array];
+    for (HTMLElement *node in pNodes) {
+        if ([node.tagName isEqualToString:@"img"] && node.attributes[@"src"]) {
+            [imgs addObject:node];
+        }
+        if ([node.tagName isEqualToString:@"p"]) {
+            [ps addObject:node];
+        }
+    }
+    NSArray *testNodes = [body nodesMatchingSelector:@"p"];
+    NSLog(@"%@",ps);
+    XCTAssert(YES,@"ok");
+}
 @end
